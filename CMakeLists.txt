@@ -4,9 +4,9 @@ project(medusa LANGUAGES C VERSION 0.1.1)
 
 set(ENABLE_TEST ON)
 
-# set(CMAKE_VERBOSE_MAKEFILE ON)
-
-set(CMAKE_C_FLAGS "-Wall -Werror -fsanitize=address")
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_FLAGS "-Wall -Werror -rdynamic")
 
 add_library(${CMAKE_PROJECT_NAME} medusalog.c)
 add_library(${CMAKE_PROJECT_NAME}::${CMAKE_PROJECT_NAME} ALIAS ${CMAKE_PROJECT_NAME})

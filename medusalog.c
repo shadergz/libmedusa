@@ -60,7 +60,7 @@ medusalog_t* medusa_new(medusaattr_t *user_attr, const char **logfilenames, size
 
     while (logfilenames && *logfilenames != NULL)
     {
-        strncpy(pathbuffer, *logfilenames, sizeof(pathbuffer));
+        strncpy(pathbuffer, *logfilenames, sizeof(pathbuffer) - 1);
         char *bak;
 
         char *pathtree;
