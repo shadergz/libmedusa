@@ -86,7 +86,7 @@ medusalog_t* medusa_new(medusaattr_t *user_attr, const char **logfilenames, size
 
         /* Creating and opening all specified files */
         FILE *ptr = fopen(*logfilenames++, "a");
-        assert(ptr);
+        assert(ptr != NULL);
         *out++ = ptr;
     }
 
@@ -130,7 +130,6 @@ static void medusa_wait(medusalog_t *medusa)
 bool medusa_destroy(medusalog_t *medusa)
 {
     assert(medusa);
-    //free((char*)medusa->name);
 
     medusa_wait(medusa);
 
@@ -295,6 +294,7 @@ static int medusa_do(size_t milliseconds, medusa_log_type_t type, medusalog_t *m
     );
 
     free(stack_strings);
+
 #endif
 
     snprintf(auxbuffer, sizeof(auxbuffer), "[%s] ", date_str);
@@ -311,7 +311,7 @@ static int medusa_do(size_t milliseconds, medusa_log_type_t type, medusalog_t *m
 
     struct medusa_thread *medusa_data = malloc(sizeof(struct medusa_thread));
     
-    assert(medusa_data);
+    assert(medusa_data != NULL);
 
     medusa_data->medusa = medusa;
 
