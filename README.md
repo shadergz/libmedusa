@@ -18,4 +18,4 @@ build> ./test/medusatest
 
 ## References
 
-- [medusalog](https://github.com/beloncode/medusalog.git)
+- [medusalog](https://github.com/shadergz/medusalog.git) Based on this program

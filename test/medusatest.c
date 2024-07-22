@@ -41,7 +41,7 @@ int main()
 
     medusa_log_await(2000, INFO, main_log, "Hmmm this will be printed before the success message"); 
 
-    medusa_log(WARNING, main_log, "I will print a error message, but don't worry, isn't a real error :)");
+    medusa_log(WARNING, main_log, "I will print an error message, but don't worry, isn't a real error :)");
 
     medusa_log(ERROR, main_log, "Error message");
 
